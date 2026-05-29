@@ -1,11 +1,45 @@
-In this assignment, I performed basic data exploration and cleaning using Pandas on the shopping dataset.
+# Week 1 - Basic Data Exploration and Cleaning Using Pandas
 
-1. First, I loaded the CSV file into a Pandas DataFrame and explored the dataset using functions such as head(), tail(), shape, columns and dtypes. The dataset contains 1000 rows and 24 columns.
+In this assignment, I performed data exploration and data cleaning using the Pandas library on a shopping dataset containing product-related information.
 
-2. I checked for missing values and found missing data in columns such as discount, what_customers_said, seller_name, videos, seller_information, and variations. The missing values in the 'discount' column were filled with 0 while the missing values in text-based columns were filled with "Not Available".
+## 1. Dataset Loading and Exploration
 
-3. I performed basic operations such as selecting important columns and filtering products based on discount and category. Duplicate records were checked and removed if present.
+- Loaded the CSV dataset into a Pandas DataFrame.
+- Explored the dataset structure using functions such as `head()`, `tail()`, `shape`, `columns`, and `dtypes`.
 
-4. Finally, I created a derived column named total_amount using initial_price and ratings_count. Since the dataset did not contain a quantity column, ratings_count was used as a quantity-like column for deriving total_amount.
+## 2. Missing Value Handling
 
-5. The cleaned dataset was saved as cleaned_shopping_dataset.csv.
+- Analyzed the dataset for missing values across all columns.
+- Identified missing data in columns including `discount`, `what_customers_said`, `seller_name`, `videos`, `seller_information`, and `variations`.
+- Replaced missing values in the `discount` column with **0**.
+- Filled missing values in text-based columns with **"Not Available"** to maintain data consistency.
+
+## 3. Data Cleaning and Transformation
+
+- Performed column selection and row filtering based on business-relevant attributes such as product category and discount percentage.
+- Checked for duplicate records and removed them where applicable to improve data quality.
+
+## 4. Derived Column Creation
+
+- Created a new derived column named `total_amount`.
+- Since the dataset did not contain a dedicated `quantity` field, the `ratings_count` column was used as a quantity-like metric.
+- Calculated `total_amount` using the formula:
+
+```python
+total_amount = initial_price * ratings_count
+```
+
+## 5. Data Export
+
+- Saved the cleaned and transformed dataset as `cleaned_shopping_dataset.csv` for further analysis and downstream processing.
+
+## Key Skills Demonstrated
+
+- Python Programming
+- Pandas Data Analysis
+- Data Exploration
+- Missing Value Handling
+- Data Cleaning
+- Data Transformation
+- Derived Feature Creation
+- CSV File Operations
